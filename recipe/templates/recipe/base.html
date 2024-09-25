@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Recipe Management System</title>
+  </head>
+  <body>
+    <header>
+      <h1>Recipe Management System</h1>
+    </header>
+
+    <main>
+      {% include 'recipe/search_form.html' %}
+      {% block content %}
+      <!-- This block will be overridden by content from other templates -->
+      {% endblock %}
+    </main>
+
+    <footer></footer>
+  </body>
+</html>
