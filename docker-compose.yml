@@ -1,0 +1,32 @@
+services:
+  web:
+    env_file:
+      - .env
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    restart: always
+    volumes:
+      - .:/code
+    depends_on:
+      - db
+    ports:
+      - 8000:8000
+    command: ["python3", "manage.py", "runserver", "0.0.0.0:8000"]
+    networks:
+      - crud_nw
+
+  db:
+    image: postgres
+    restart: always
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data/
+    ports:
+      - 5432:5432
+    env_file:
+      - .env
+    networks:
+      - crud_nw
+networks:
+  crud_nw:
+    driver: bridge
