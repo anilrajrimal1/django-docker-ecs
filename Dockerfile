@@ -1,6 +1,6 @@
 FROM python:3.10.12-slim
 
-ENV PYTHONUNBUFFERED 1
+ENV PYTHONUNBUFFERED=1
 
 RUN mkdir -p /code
 
