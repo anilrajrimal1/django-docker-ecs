@@ -1,6 +1,6 @@
 DB_ENGINE=django.db.backends.postgresql
 DB_NAME=recipes
 DB_USER=anil
-DB_PASSWORD=ocCap2hJOrAjVwI9ut9lYQ
+DB_PASSWORD=   pass like tjis 'ocCap2hJOrAjVwI9ut9lYQ'
 DB_HOST='159 server ko ip'
 DB_PORT=5432
