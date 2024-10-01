@@ -2,7 +2,10 @@ from django.shortcuts import render, redirect
 from .forms import RecipeForm
 from .models import Recipe
 from django.contrib import messages
+from django.http import HttpResponse
  
+def hello_homepage(request):
+    return HttpResponse("Hello! This is Homepage for HealthCheck")
 
 def add_recipe(request):
     if request.method == 'POST':
