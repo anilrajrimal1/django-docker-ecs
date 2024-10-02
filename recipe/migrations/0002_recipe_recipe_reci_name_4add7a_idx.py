@@ -6,12 +6,15 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('recipe', '0001_initial'),
+        ("recipe", "0001_initial"),
     ]
 
     operations = [
         migrations.AddIndex(
-            model_name='recipe',
-            index=models.Index(fields=['name', 'ingredients', 'instructions'], name='recipe_reci_name_4add7a_idx'),
+            model_name="recipe",
+            index=models.Index(
+                fields=["name", "ingredients", "instructions"],
+                name="recipe_reci_name_4add7a_idx",
+            ),
         ),
     ]
